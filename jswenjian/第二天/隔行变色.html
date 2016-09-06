@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        div {
+            width: 500px;
+            border: 1px solid pink;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        li {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .bg1 {
+            background: aqua;
+        }
+
+        .bg2 {
+            background: greenyellow;
+        }
+
+        .bg3 {
+            background: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--ul>li{list$}*12-->
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li>list8</li>
+        <li>list9</li>
+        <li>list10</li>
+        <li>list11</li>
+        <li>list12</li>
+    </ul>
+</div>
+<script>
+
+    var oDiv = document.getElementById('box');
+    var oLis = oDiv.getElementsByTagName('li');
+    for (var i = 0; i < oLis.length; i++) {
+        var oLi = oLis[i];
+        i % 2 == 0 ? (oLi.className = 'bg1', oLi.zy = 'bg1') : (oLi.className = 'bg2', oLi.zy = 'bg2');
+        oLi.onmouseover = function () {
+            this.className = 'bg3';
+        };
+        oLi.onmouseout = function () {
+            var old = this.zy;
+            this.className = old;
+        }
+    }
+
+    /*
+     var oDiv=document.getElementById('box');
+     var oLi=oDiv.getElementsByTagName('li');
+     for(var i=0;i<oLi.length;i++){
+     var Li=oLi[i];
+     i%2==0?(Li.className='bg1',Li.zy='bg1'):(Li.className='bg2',Li.zy='bg2');
+     Li.onmouseover=function(){
+     this.className='bg3';
+     };
+     Li.onmouseout= function () {
+     var old=this.zy;
+     this.className=old;
+     }
+     }*/
+    var ary = [12, 23, 34, 56, 67, 78, 89, 90];
+    var newAry = ary.slice(2);
+    console.log(newAry);
+    slice(3)
+</script>
+</body>
+</html>

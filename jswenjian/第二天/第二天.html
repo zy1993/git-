@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--基本数据类型与引用数据类型的本质区别-->
+<script>
+    //基本数据类型:操作的是一个值，把这个值给第二个变量，就相当于把这个值复制了一份
+    //引用数据类型：操作的是一个空间（内存）地址
+    //var num1 = 6;
+   // var num2 = num1;
+   // num2++;//在原有的基础上+1  num2+=1 num2=num2+1  在原有的基础上加2  num2+=2  num2=num2+2
+   // console.log(num1);
+
+
+</script>
+
+<!--三种判断-->
+<script>
+//if,else if ,else
+    //if条件中
+    // && ：并且 都真才真
+    // || ：或者 一真都真
+    // == 比较
+    // === 严格比较
+    // 可以是一个值 直接判断真假（转化为布尔类型）
+
+//三元运算符（三目运算符）：简单的if else 判断
+    //条件？条件成立执行的代码：条件不成立执行的代码
+     //   [] ? alert('zhufeng') : void 0;
+     //   if (123) {
+     //       alert('zh')
+     //   }
+     //   if (123)alert('123');
+
+//switch case  不同值情况的判断
+    //每个case的比较都是=== 三个等号的比较
+        //    switch (5) {
+        //        case 1:
+        //            console.log('yi');
+        //            break;//组织代码继续执行，如果不加，不管后面的代码是否成立都会执行  “关键字”
+        //        case 2:
+        //            console.log('er');
+        //            break;
+        //        case 3:
+        //            console.log('san');
+        //            break;
+        //        default://以上条件都不成立相当于if else中的最后的else
+        //            console.log('fangjia');
+        //    }
+</script>
+
+<!--循环-->
+<script>
+//for循环
+    //每一轮循环 都有以下四步
+    //1)初始值
+    //2)满足循环执行的条件
+    //3)执行循环体中的代码
+    //4)执行累加的操作
+    // i++; i+=1;i=i+1;//在原来的基础上加1
+
+    // 在for循环中，只要遇到break continue 循环体中的代码就不在继续执行了
+    //     break:直接跳出整个循环
+    //     continue：本轮循环体后面的代码不再执行，但是会继续执行累加的操作，还是会继续执行下一轮循环
+
+
+//for in 循环：主要用来循环对象中的属性名和属性值
+    //for(var key in obj){
+    //    console.log(key);//key 循环的是对象中的属性名
+     //   console.log(obj[key]);//obj['key'] 循环的是对象中属性名对应的属性值
+   // }
+    //顺序：先输出属性名为数字（数字按照从小到大的顺序），其他的就是按照书写的顺序
+
+//while 循环  和for循环是一样的
+        var i=0;
+        while(i<10){
+            console.log(i);
+            i++;
+        }
+
+</script>
+</body>
+</html>
